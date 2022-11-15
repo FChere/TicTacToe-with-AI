@@ -4,12 +4,14 @@
 
 import numpy as np
 
+
 def make_empty_board():
     return [
         [None, None, None],
         [None, None, None],
         [None, None, None],
     ]
+
 
 def get_winner(board):
     """Determines the winner of the given board.
@@ -81,10 +83,10 @@ def get_winner(board):
     else:
         return None
 
+
 def other_player(player):
     """Given the character for a player, returns the other player."""
     if player == 'X':
         return 'O'
     else:
         return 'X'
-
