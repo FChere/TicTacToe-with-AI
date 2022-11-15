@@ -4,7 +4,7 @@
 
 from typing import List
 from logic import make_empty_board, get_winner, other_player
-from game import *
+from thegame import *
 import copy
 
 
