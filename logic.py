@@ -19,34 +19,36 @@ def get_winner(board):
     O_win = 0  
     X_win = 0  
 
+    # Check horizontal for how many X or O
     for row in board:
         count_O = 0
         count_X = 0
         for item in row:
             if item == 'O':
-                count_O = count_O + 1  # Check how many O in a row
+                count_O = count_O + 1  
             elif item == 'X':
-                count_X = count_X + 1  # Check how many X in a row
+                count_X = count_X + 1  
         if count_O == 3:
-            O_win = O_win + 1  # If there are 3 O in a row, O won 
+            O_win = O_win + 1   
         elif count_X == 3:
-            X_win = X_win + 1  # If there are 3 X in a row, X won 
+            X_win = X_win + 1   
 
-
+    # Check vertical for how many X or O 
     board_trans = np.transpose(board) 
     for row in board_trans:
         count_O = 0
         count_X = 0
         for item in row:
             if item == 'O':
-                count_O = count_O + 1  # Check how many O in a col
+                count_O = count_O + 1  
             elif item == 'X':
-                count_X = count_X + 1  # Check how many X in a col
+                count_X = count_X + 1  
         if count_O == 3:
-            O_win = O_win + 1  # If there are 3 O in a col, O won 
+            O_win = O_win + 1   
         elif count_X == 3:
-            X_win = X_win + 1  # If there are 3 X in a row, X won 
+            X_win = X_win + 1  
 
+    # Check diagnal for how many X or O
     count_O = 0
     count_X = 0
     for i in range(3):
