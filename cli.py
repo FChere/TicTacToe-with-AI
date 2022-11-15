@@ -7,6 +7,7 @@ from logic import make_empty_board, get_winner, other_player
 from thegame import *
 import copy
 
+
 def print_board(board):
     display_board = copy.deepcopy(board)
     for i in range(3):
@@ -16,6 +17,7 @@ def print_board(board):
             else:
                 display_board[i][j] = "-"
         print(display_board[i])
+
 
 if __name__ == '__main__':
     game = SinglePlayerGame()
